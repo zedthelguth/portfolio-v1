@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@700&family=Raleway&family=Ubuntu+Mono&display=swap');
+
+:root{
+    --color1:black;
+    --color2:#ebb84b;
+    --color3:#163a4a;
+    --color4:#64B09D;
+    --color5:#ebebea;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*,*::before,*::after{
+    box-sizing:inherit;
+  
+}
+html{
+      scroll-behavior: smooth;
+      font-size: 62.5%;
+      background-color: var(--color3);
+}
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 480px / 16px = 28.75em */
+  @media (max-width: 30em) {
+    html {
+      font-size: 55%;
+    }
+    
+  }
+  
+/* BASE STYLES */
+body{
+    font-size: 1.8rem;
+    /* background-color: var(--color2); */
+    font-family: 'Raleway',sans-serif;
+    font-weight: 400;   
+}
+
+h1,h2{
+    font-family:'Atma',cursive;
+    text-align: center;
+    font-weight: 300;
+    
+}
+h1,h2::first-letter{
+    text-transform: capitalize;
+}
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4rem;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--color3);
+}
+/* navbar styling */
+.nav{
+    background-color: var(--color2);
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 900;
+}
+.nav-list{
+    display: flex;
+    margin-right:2rem;
+}
+.nav-list a{
+    display: block;
+    padding: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Ubuntu Mono',monospace;
+}
+.nav-list a:hover{
+    color: var(--color2);
+    background-color: var(--color3);
+}
+@media (max-width:30em) {
+    .nav{
+        justify-content: center;
+        
+    }
+    
+}
+/* WELCOME SECTION */
+.hero-image {
+    margin-top: 5rem;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Esquire\ 003\ Keyboard.png");
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .hero-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--color2);
+  }
+  .hero-text >h1{
+    font-size: 8rem;
+  }
+  .hero-text >p{
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .hero-btn{
+    border: none;
+    margin-top: 20px;
+    padding:10px 20px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color3);
+    background-color: var(--color2);
+    border-radius: 8px;
+    text-transform: capitalize;
+    cursor:pointer;
+  }
+  .hero-btn button:hover{
+    color: white;
+  }
+
+  @media (max-width:30em) {
+    .hero-text >h1{
+        font-size: 4rem;
+    }
+    .hero-text >p{
+        font-size: 1.6rem;
+    }
+    .hero-image{
+        width: 100%;
+    }
+  }
+  @media (max-width:62.5em) {
+    .hero-text >h1{
+        font-size: 4.5rem;
+    }
+    .hero-text >p{
+        font-size: 2rem;
+    }
+    
+}
+/* END WELCOME SECTION */
+/* starr about section */
+#about{
+    margin: 4rem 0;
+    padding: 10rem 2rem;
+    
+}
+.about-header{
+    color: var(--color4);  
+}
+
+.about-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.about .about-left{
+  width: 45%;
+}
+.about .about-left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 40px;
+}
+
+.about .about-right{
+  width: 55%;
+  color: var(--color2);
+  text-align: justify;
+  
+}
+.about-right h3{
+  font-size: 4rem;
+}
+.about-right .right-image{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-between;
+  padding: 20px 10px;
+}
+.about-right .right-image img{
+  height: 300px;
+  border-radius: 25px;
+  transition: all 0.5s ease-out;
+}
+.about-right .right-image img:hover{
+  transform: translateY(30px);
+ 
+}
+@media (max-width:30em){
+  .about-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .about-left{
+    width: 100%;
+  }
+  .about .about-left img{
+    margin: 0 auto;
+    left: 0;
+    height: 200px;
+    width: 200px;
+   
+  }
+  .about .about-right{
+    width: 70%;
+    margin-top: 20px;
+  }
+  .about-right .right-image{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+  
+  }
+  .about-right .right-image img{
+    height: 150px;
+    border-radius: 25px;  
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width:61.25em){
+  .about-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .about-left{
+    width: 100%;
+  }
+  .about .about-left img{
+    margin: 0 auto;
+    display: block;
+   
+  }
+  .about .about-right{
+    width: 80%;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  
+  .about-right .right-image{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+  
+  }
+  .about-right .right-image img{
+    height: 300px;
+    border-radius: 25px;  
+    
+  }
+}
+/* end about section */
+/* start project section */
+#projects{
+  background-color: var(--color4);
+  padding: 10rem 2rem;
+}
+.projects-section-header{
+  color: var(--color3);
+}
+.projects-grid{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+
+}
+.projects-grid img{
+  height: 350px;
+  width: 400px;
+  object-fit: cover;
+ 
+}
+.project-title{
+  color: var(--color2);
+  font-weight: 900;
+  text-align: center;
+  background-color: var(--color3);
+  padding: 2rem 0.5rem;
+  margin-top: -0.2rem;
+  text-transform: capitalize;
+}
+.projects-section .btn{
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  color: var(--color2);
+  background-color: var(--color3);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.btn a{
+  color: var(--color2);
+}
+/* end projects section */
+/* start contacts section */
+#contacts{
+  padding: 10rem 2rem;
+  color: var(--color2);
+  text-align: center;
+}
+.contacts-links{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.contacts-links a{
+  color: var(--color2);
+  font-size: 2.4rem;
+  padding: 3rem;
+  transition: all 0.4s ease-in-out;
+}
+.contacts-links a:hover{
+  transform: translateY(20px);
+}
